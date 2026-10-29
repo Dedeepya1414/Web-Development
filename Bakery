@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Crumbs Bakery</title>
+  <link rel="stylesheet" href="second.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#">Sweet Crumbs</a>
+
+    <nav aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#custom-cakes">Custom Cakes</a>
+      <a href="#offers">Offers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Fresh from our oven</p>
+        <h1>A little sweetness<br>for every occasion</h1>
+        <p>Cakes, pastries, and treats lovingly baked fresh every day.</p>
+        <a class="button" href="#menu">Explore our menu</a>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">Made with love</p>
+        <h2>Bakery Favorites</h2>
+        <p>Find a new favorite or enjoy a classic.</p>
+      </div>
+
+      <div class="gallery">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Chocolate layer cake">
+          <div class="product-info">
+            <h3>Chocolate Celebration Cake</h3>
+            <p>Rich chocolate sponge with smooth ganache.</p>
+            <span class="price">₹850</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80" alt="Fresh fruit pastries">
+          <div class="product-info">
+            <h3>Fruit Cream Pastries</h3>
+            <p>Flaky pastry topped with fresh seasonal fruit.</p>
+            <span class="price">₹120 each</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80" alt="Chocolate chip cookies">
+          <div class="product-info">
+            <h3>Chocolate Chip Cookies</h3>
+            <p>Golden, chewy cookies with chocolate chunks.</p>
+            <span class="price">₹80 each</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="custom-section" id="custom-cakes">
+      <div class="custom-image" role="img" aria-label="Decorated custom cake"></div>
+      <div class="custom-copy">
+        <p class="eyebrow">Your idea, baked beautifully</p>
+        <h2>Custom Cakes for Special Days</h2>
+        <p>Planning a birthday, wedding, or celebration? Choose your flavor, size, and design, and we’ll make a cake just for you.</p>
+        <p class="starting-price">Custom cakes from ₹1,500</p>
+        <a class="button" href="#contact">Ask about a custom cake</a>
+      </div>
+    </section>
+
+    <section class="offer-section" id="offers">
+      <p class="eyebrow">A seasonal treat</p>
+      <h2>Diwali Sweet Box</h2>
+      <p>A festive assortment of cookies, mini cakes, and baked treats.</p>
+      <p class="offer-price">₹699 per box</p>
+      <a class="button button-light" href="#contact">Reserve a box</a>
+    </section>
+:root {
+  --cream: #fff8ef;
+  --pink: #e9a7a0;
+  --rose: #9f4f53;
+  --brown: #49342d;
+  --muted: #76675f;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 8%;
+  background: var(--white);
+}
+
+.logo {
+  color: var(--rose);
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+nav a,
+.contact-details a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+nav a:hover,
+.contact-details a:hover {
+  color: var(--rose);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  padding: 64px 8%;
+  background:
+    linear-gradient(90deg, rgba(40, 25, 20, 0.7), rgba(40, 25, 20, 0.12)),
+    url("https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1800&q=85")
+    center / cover;
+  color: var(--white);
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.hero h1 {
+  margin: 8px 0 14px;
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.08;
+}
+
+.eyebrow {
+  color: var(--rose);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: #ffe0cc;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background: var(--rose);
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #813e43;
+}
+
+.section {
+  padding: 64px 8%;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.section-heading h2,
+.custom-copy h2,
+.offer-section h2 {
+  margin: 4px 0 10px;
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.product-card {
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 5px 18px rgba(73, 52, 45, 0.09);
+}
+
+.product-card img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 16px 18px 20px;
+}
+
+.product-info h3 {
+  margin: 0 0 6px;
+  font-family: Georgia, serif;
+}
+
+.product-info p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.price,
+.starting-price {
+  color: var(--rose);
+  font-weight: bold;
+}
+
+.custom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 8%;
+  background: #f4e4d7;
+}
+
+.custom-image {
+  min-height: 330px;
+  border-radius: 10px;
+  background: url("https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=1000&q=85")
+    center / cover;
+}
+
+.custom-copy {
+  max-width: 520px;
+}
+
+.custom-copy p {
+  color: var(--muted);
+}
+
+.custom-copy .starting-price {
+  color: var(--rose);
+}
+
+.offer-section {
+  padding: 52px 8%;
+  background: var(--rose);
+  color: var(--white);
+  text-align: center;
+}
+
+.offer-section .eyebrow {
+  color: #ffe0cc;
+}
+
+.offer-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.button-light {
+  background: var(--white);
+  color: var(--rose);
+}
+
+.button-light:hover {
+  background: var(--cream);
+}
+
+.contact-details {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 10px;
+  background: var(--white);
+}
+
+footer {
+  padding: 18px;
+  background: var(--brown);
+  color: var(--white);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 12px 18px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-section {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-image {
+    min-height: 250px;
+  }
+}
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Come say hello</p>
+        <h2>Visit Sweet Crumbs</h2>
+      </div>
+
+      <div class="contact-details">
+        <p><strong>Address:</strong> 24 Rose Lane, Bengaluru</p>
+        <p><strong>Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><strong>Email:</strong> <a href="mailto:hello@sweetcrumbs.example">hello@sweetcrumbs.example</a></p>
+        <p><strong>Hours:</strong> Mon–Sat, 9:00 AM–8:00 PM</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Sweet Crumbs Bakery · Baked fresh, shared with love.</p>
+  </footer>
+</body>
+</html>
